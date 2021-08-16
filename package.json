@@ -1,16 +1,18 @@
 {
-  "main": "index.js",
+  "main": "src/App",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "web": "expo start --web",
-    "start": "react-native start"
+    "web": "npm run lint && expo start --web",
+    "start": "react-native start",
+    "lint": "npx eslint './src/**/*.{js,jsx}'"
   },
   "dependencies": {
     "expo": "~42.0.1",
     "expo-splash-screen": "~0.11.2",
     "expo-status-bar": "~1.0.4",
     "expo-updates": "~0.8.1",
+    "npx": "^10.2.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "~0.63.4",
@@ -24,6 +26,7 @@
     "@babel/core": "^7.9.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
+    "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.24.0",
